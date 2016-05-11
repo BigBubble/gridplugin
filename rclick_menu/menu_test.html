@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../source/javascript/jquery1.10.2.js"></script>
+    <script type="text/javascript" src="../source/javascript/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="../source/css/menu.css"></head>
+<body>
+<div id="grid">
+    <div class="dot" id = "1" style="width:20px;heigth:20px;position:relative;background:#567">d</div>
+
+    <h1>ssssss</h1>
+     <div class="dot" id="2" style="width:20px;heigth:20px;position:relative;background:#567">d</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.fn.menu('.dot',[{
+                name:'修改',
+                fn : modify
+            },{
+                name:"回滚",
+                fn:rollback
+            },{
+                name:"删除",
+                disabled:true,
+                fn:del
+            }]);
+    });
+    function modify(item,elem){
+        var id = elem.attr("id");
+        console.log(id+"modify clicked");
+    }
+    function rollback(item,elem){
+        var id = elem.attr("id");
+        console.log(id+"rollback clicked");
+    }
+    function del(item,elem){
+        var id = elem.attr("id");
+        console.log(id+"delete clicked");
+    }
+</script>
+<div class="menu" style="position:absolute;border:2px solid #ccc;z-index:10;display:none"><ul class="menu-list"></ul></div>
+</body>
+</html>
