@@ -1,5 +1,5 @@
 from gmpy2 import *
-global t,tlist
+global t
 t = 3
 #[0,1,2]
 alist = range(t)
