@@ -1,11 +1,10 @@
 from gmpy2 import *
-global t
 t = 3
 #[0,1,2]
 alist = range(t)
 #[0,1]
 blist = alist[0:t-1]
-#function of calculate y[i]
+#function for calculate y[i]
 def ff_m(s,m,c,p):
 	yy = m
 	for i in blist:
@@ -29,6 +28,7 @@ while is_prime(p)==False:
 	p = mpz_urandomb(status,100)
 #多项式系数
 s = [0] * (t-1)
+
 for i in blist:
 	s[i] = mpz_urandomb(status,100)
 #键值对
