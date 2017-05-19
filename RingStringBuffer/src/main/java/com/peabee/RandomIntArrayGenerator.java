@@ -30,10 +30,9 @@ public class RandomIntArrayGenerator {
         Random random = new Random();
         for(int i=0; i<length; i++){
             int randomInt = random.nextInt(length);
-            int curr = b[randomInt];
-            if(curr != b[i]){
+            if(randomInt != i){
                 int temp = b[i];
-                b[i] = curr;
+                b[i] = b[randomInt];
                 b[randomInt] = temp;
             }
         }
