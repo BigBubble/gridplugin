@@ -2,6 +2,7 @@ package me.peabee.func;
 
 import me.peabee.exception.ParserException;
 import me.peabee.model.ExpressionNode;
+import me.peabee.utils.ExpressionUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,11 @@ public class ExpressionParser {
 
         //替换表达式内所有空白
         expression = expression.replaceAll("\\s","");
-
+        //检查表达式语法是否正确，
+        String errorMsg = ExpressionUtil.syntaxCheck(expression);
+        if(errorMsg != null){
+            throw new ParserException("表达式语法错误："+errorMsg);
+        }
         String variableString = null;
 
         char leftStart = '\0'; //起始标记 '(','['

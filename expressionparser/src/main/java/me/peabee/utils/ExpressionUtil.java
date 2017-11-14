@@ -8,7 +8,7 @@ public class ExpressionUtil {
      * 表达式语法检查
      * @param expression
      */
-    public static void syntaxCheck(String expression){
-        //1 主表达式逻辑分组
+    public static String syntaxCheck(String expression){
+        return null;
     }
 }
