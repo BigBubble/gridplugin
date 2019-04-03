@@ -38,7 +38,6 @@ public class TransactionAnnotationSameClassTest extends AbstractJUnit4SpringCont
 
     @Test
     public void update() {
-        //更新id = 1 使用事务， 应该为更新前的值1
         Transaction t = new Transaction();
         t.setId(1);
         t.setValue(2);

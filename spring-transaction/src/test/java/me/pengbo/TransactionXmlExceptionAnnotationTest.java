@@ -39,7 +39,6 @@ public class TransactionXmlExceptionAnnotationTest extends AbstractJUnit4SpringC
 
     @Test
     public void update() {
-        //更新id = 1 使用注解事务， 应该为更新后的值1
         Transaction t = new Transaction();
         t.setId(1);
         t.setValue(2);

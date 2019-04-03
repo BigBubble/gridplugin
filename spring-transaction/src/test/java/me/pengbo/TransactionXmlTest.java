@@ -41,7 +41,6 @@ public class TransactionXmlTest extends AbstractJUnit4SpringContextTests {
 
     @Test
     public void update() {
-        //更新id = 1 不使用事务， 应该为更新后的值2
         Transaction t = new Transaction();
         t.setId(1);
         t.setValue(2);
@@ -55,7 +54,6 @@ public class TransactionXmlTest extends AbstractJUnit4SpringContextTests {
         assert t.getValue() == 2;
         System.out.println("id:" + t.getId() + ",value:" + t.getValue());
 
-        //更新t.id = 2 使用事务， 应该为原来的值2
         t.setId(2);
         t.setValue(4);
 
