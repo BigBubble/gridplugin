@@ -10,7 +10,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <webroot.path>src/main/webapp</webroot.path>
-    <spring-version>4.3.18</spring-version>
+    <spring-version>5.3.19</spring-version>
     <log4j-version>2.2</log4j-version>
   </properties>
   <repositories>
